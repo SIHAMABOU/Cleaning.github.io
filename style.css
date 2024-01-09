@@ -1,0 +1,974 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #677d8f;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+header {
+  background-color: #afadad42;
+}
+.container {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  color: #afadad;
+  font-size: medium;
+  align-items: center;
+}
+.contain{
+  display: flex;
+}
+.contain .info-left{
+padding-left: 10px;
+}
+.info-left i {
+  color: rgba(30, 165, 30, 0.599);
+}
+.social-icons i {
+  margin-right: 25px;
+  padding-left: 10px;
+}
+
+.button {
+  width: 140px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(
+    to left,
+    rgba(57, 121, 239, 0.977),
+    rgba(34, 94, 204, 0.703)
+  );
+  border-radius: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition-duration: 0.2s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.116);
+}
+
+.bell {
+  width: 13px;
+}
+
+.bell path {
+  fill: rgb(255, 255, 255);
+}
+
+.button:hover {
+  background: linear-gradient(
+    to left,
+    rgb(41, 27, 239),
+    rgba(13, 38, 83, 0.703)
+  );
+}
+
+.button:active {
+  transform: scale(0.97);
+  transition-duration: 0.2s;
+}
+
+.button:hover .bell {
+  animation: bellRing 0.9s both;
+}
+
+/* bell ringing animation keyframes*/
+@keyframes bellRing {
+  0%,
+  100% {
+    transform-origin: top;
+  }
+
+  15% {
+    transform: rotateZ(10deg);
+  }
+
+  30% {
+    transform: rotateZ(-10deg);
+  }
+
+  45% {
+    transform: rotateZ(5deg);
+  }
+
+  60% {
+    transform: rotateZ(-5deg);
+  }
+
+  75% {
+    transform: rotateZ(2deg);
+  }
+}
+
+
+p {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+#banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 670px;
+  position: relative;
+}
+
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+}
+
+#banner p {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 66px;
+  color: white;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+#banner span {
+  display: block;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+/* Gestion des flèches du carrousel */
+#banner .arrow {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 98%;
+  color: white;
+  font-size: 4rem;
+  padding-right: 0.7rem;
+  padding-left: 0.7rem;
+  cursor: pointer;
+}
+#banner .arrow_left {
+  left: 0;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+#banner .arrow_left:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+#banner .arrow_right {
+  right: 0;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+#banner .arrow_right:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* Gestion des points du carrousel */
+.dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+.dot {
+  margin-inline: 5px;
+  width: 13px;
+  height: 13px;
+  background-color: #ffffff00;
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.dot_selected {
+  background-color: #fff;
+}
+#banner button {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(40, 144, 241);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(40, 144, 241);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+#banner button span {
+  margin: 10px;
+}
+
+#banner button::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+#banner button:hover {
+  color: #fff;
+  border: 1px solid rgb(40, 144, 241);
+}
+
+#banner button:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
+}
+/* cleaning service */
+.sec {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  text-align: center;
+}
+
+.h-lg {
+  margin-top: 60px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #474343;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 29px;
+  margin: 60 0 41px;
+  background: url(/images/h.png) no-repeat bottom center;
+}
+.pg {
+  line-height: 2em;
+  margin-top: 30px;
+  text-align: center;
+  color: #474343a2;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider {
+  max-width: 1100px;
+  height: 427px;
+  display: flex;
+}
+.slider .card {
+    position: relative;
+  flex: 1;
+  margin: 30px;
+  justify-content: space-around;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 30px 30px rgba(214, 213, 213, 0.555);
+}
+
+.slider .card .img {
+  height: 100px;
+  margin: 16px;
+  width: calc(100% - 32px);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+.slider .card .img:hover {
+  filter: brightness(75%);
+}
+.slider .card .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.2s ease-in-out;
+}
+
+.slider .card .img img:hover {
+  transform: scale(1.1); /* Scale up by 10% on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.slider .card .content {
+  padding: 10px 20px;
+}
+.card .content .title {
+    font-family:'Poppins';
+    font-weight:bold;
+    font-size: 20px;
+    color: #4b5b68;
+}
+.card .content .sub-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #677d8f;
+}
+.hoveR {
+  border-radius: 20px;
+  padding: 10px;
+  border-color: #1061c491;
+  background-color: white;
+  font-weight: bold;
+}
+.hoveR:hover {
+  background-color: rgba(0, 72, 255, 0.692);
+  color: white;
+}
+.check-icon {
+  list-style-type: none; /* Supprimez le style de puce par défaut */
+  position: relative;
+  /* Espace pour l'icône à gauche du texte */
+}
+
+.check-icon:before {
+  content: "\f00c"; /* Code Unicode pour l'icône de vérification de Font Awesome */
+  font-family: FontAwesome; /* Assurez-vous de charger la police Font Awesome */
+  position: absolute;
+  left: 0;
+  color: #1061c491; /* Couleur de l'icône (changez-la selon vos besoins) */
+}
+/* Ajout des règles pour les écrans plus petits */
+@media only screen and (max-width: 768px) {
+  .h-lg,.pg {
+    font-size: 1.5rem;
+  }
+
+  .slider .card {
+    width: calc(50% - 20px);
+  }
+}
+
+/* Ajout des règles pour les écrans encore plus petits */
+@media only screen and (max-width: 480px) {
+  .slider .card {
+    width: calc(100% - 20px);
+  }
+}
+/* END cleaning service */
+
+/* Start about Section  */
+.about{
+    background: url(images/block-bg-1.jpg) no-repeat;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.about .right{
+right: -6%;
+margin-bottom: 30%;
+}
+.containner{
+    margin-top: 70px;
+    margin-left: 50px;
+}
+.containner h2{
+    font-family:'Poppins';
+    line-height: 56px;
+    font-weight: 700;
+    color: #4b5b68;
+}
+.containner h4{
+    font-family:'Poppins';
+    line-height: 30px;
+    font-weight:bold;
+    font-size: 20px;
+    color: #4b5b68;
+}
+.list-about{
+    display: flex;
+}
+.list-about li {
+    list-style: none;
+    padding-left: 30px;
+}
+.list-about a{
+    text-decoration: none;
+    color: #474343;
+    font-size: 20px;
+    font-weight:bold;
+    font-family: 'Poppins';
+}
+.list-about a:hover{
+    color:#2ea2cc;
+}
+
+.box {
+    box-sizing: border-box;
+    width: 60%; /* Vous pouvez ajuster la largeur selon vos besoins */
+    margin: 20px 0; /* Vous pouvez ajuster la marge selon vos besoins */
+  }
+  
+  .box p {
+    margin: 0; 
+    opacity: 0.5;
+  }
+  .list-provide{
+    display:flex;
+    
+  }
+  .list-provide li{
+    list-style: none;
+    opacity: 0.5;
+
+  }
+.check:before{
+    content: "\f00c"; /* Code Unicode pour l'icône de vérification de Font Awesome */
+    font-family: FontAwesome; /* Assurez-vous de charger la police Font Awesome */
+    position: relative;
+    padding-right: 5px;
+    color: rgba(0, 128, 0, 0.578);
+}
+/* END About Section  */
+/* Start Reasons Section  */
+/* Media queries pour tous les écrans (y compris les écrans petits) */
+.Reasons {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Reasons img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.list-reasons {
+  margin: 20px 0;
+}
+
+.eng {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Media queries pour les écrans plus larges (par exemple, à partir de 768px) */
+@media only screen and (min-width: 768px) {
+  .Reasons {
+      flex-direction: row;
+      height: 600px;
+  }
+
+  .Reasons img {
+      width: auto;
+      margin: 40px;
+  }
+
+  .list-reasons {
+      margin: 40px 0;
+  }
+
+  .eng {
+      flex-direction: row;
+      align-items: initial;
+  }
+
+  .flower {
+      margin-right: 30px;
+  }
+}
+
+/* Media query spécifique pour les écrans petits (max-width: 767px) */
+@media only screen and (max-width: 767px) {
+  .Reasons {
+      order: 1; /* Change l'ordre des éléments, mettant l'image en bas des listes */
+  }
+
+  .Reasons img {
+      margin-top: 20px; /* Ajoute une marge pour séparer l'image des listes */
+  }
+}
+
+/* Styles restants inchangés */
+.flower::before {
+  font-family: "FontAwesome";
+  content: "\f06c";
+  color: rgba(0, 128, 0, 0.67);
+  margin-right: 30px;
+}
+
+.list-reasons p {
+  margin-top: 20px;
+  opacity: 0.5;
+  box-sizing: border-box;
+  width: 95%;
+  margin-left: 10px;
+}
+
+.list-reasons h1 {
+  color: #4b5b68;
+}
+
+.list-reasons span {
+  color: #2ea2cc;
+}
+
+.list-reasons h4 {
+  font-family: 'Poppins';
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #4b5b68;
+}
+
+.list-reasons .btw {
+  margin-top: 40px;
+}
+
+/* End Reasons Section  */
+
+/* Start Reviews Section  */
+
+.reviews {
+  background: url(images/bg-review.png) no-repeat;
+  height: 600px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.reviews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.867);
+}
+.swiper-wrapper {
+  position: absolute;
+  top: 20%; /* Vous pouvez ajuster la position verticale selon vos besoins */
+   /* Vous pouvez ajuster la position horizontale selon vos besoins */
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Assurez-vous que le texte est au-dessus de l'image de fond */
+  text-align: center;
+  color: #150a0a; /* Couleur du texte (blanc dans cet exemple) */
+}
+
+.reviews-content p {
+  padding-top: 20px;
+}
+
+.pf img {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  left: 45%;
+}
+.swiper-wrapper .nom{
+  position: absolute;
+  left: 42%;
+  top: 170%;
+}
+
+.swiper-slide  span {
+  color: rgba(0, 115, 255, 0.883);
+}
+
+.quot-right img {
+  position: absolute;
+  width: 80px;
+  height: 90px;
+  right: 5%;
+  top: 30%;
+}
+
+.quot-left img {
+    position: absolute;
+    width: 80px;
+    height: 90px;
+    bottom: 20%;
+    left: 40px;
+  }
+  /* <!-- End Reviews Section --> */
+
+  .cardd {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-img-top {
+    transition: all 1s ease-in-out;
+  }
+
+  .cardd:hover .card-img-top {
+    transform: scale(1.1);
+  }
+
+  .cont {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .cardd:hover .cont {
+    opacity: 1;
+    height: 100%;
+  }
+
+  .icon-link {
+    font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+    color: #fff; /* Couleur de l'icône */
+  }
+.card-body .card-title{
+    font-family:'Poppins';
+    font-weight:bold;
+    font-size: 20px;
+    color: #4b5b68;
+}
+
+.card-body  p{
+    color: #4b5b68bd;
+}
+.card-body{
+    background-color: #4b5b680e;
+}
+/* <!-- start count Section --> */
+.count{
+    height: 600px;
+}
+.block{
+    position: relative;
+   background: url(images/block-bg-5.jpg) no-repeat;
+   top: 20%;
+   height: 70%;
+   background-size: cover;
+}
+.block-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+.block-1{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    position: relative;
+    top: 30%;
+}
+.block-31 img{
+    width: 70px;
+}
+.block-31::after{
+content: '';
+display: block;
+margin: 26px auto;
+height: 2px;
+width: 35px;
+background-color: #6fbf52;
+}
+.counter-item-number{
+    font-size: 36px;
+    line-height: 1em;
+    font-weight: 600;
+    font-family: 'Poppins';
+    color: #fff;
+}
+
+.counter-item-text{
+    color: #fff;
+    padding-top: 10px;
+
+}
+
+/* <!-- END count Section --> */
+/* freein */
+.FREEIN{
+  display: flex;
+  height: 600px;
+  background-color: #47434315;
+}
+.container-FREEIN,.right-contain{
+  flex: 1; /* Les deux div occupent la même proportion d'espace disponible */
+padding: 20px; /* Ajouter un espace intérieur pour le contenu */
+}
+.container-FREEIN{
+  margin-top: 50px;
+  
+}
+.two-div-section{
+  display: grid;
+grid-template-columns: 1fr 1fr; /* Deux colonnes, une pour chaque div */
+gap: 30px; /* Espacement entre les divs */
+}
+.container-FREEIN p{
+  margin-top: 50px;
+  opacity: 0.5;
+}
+.container-FREEIN h2{
+  font-family:'Poppins';
+  line-height: 56px;
+  font-weight: 550;
+  color: #4b5b68;
+}
+.container-FREEIN h5{
+  margin-top: 30px;
+font-family:'Poppins';
+line-height: 30px;
+font-weight:bold;
+font-size: 20px;
+color: #4b5b68;
+}
+.right-contain{
+  display: flex;
+  position: relative;
+  background-size: cover; /* Assurer que l'image de fond couvre complètement la div */
+  background: url(images/index-service-house-bg.png);
+}
+.second-div.gallery {
+  margin-top: 70px;
+  margin-left: 20px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 23% 21% 6%;
+  gap: 10px;
+}
+
+.second-div img {
+
+  position: relative;
+
+  width: 100%; /* Les images occupent toute la largeur de leur conteneur */
+}
+
+/* Media query pour les écrans plus petits */
+@media only screen and (max-width: 767px) {
+  .second2-div {
+   
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .second2-div img {
+    margin-left: 40px;
+    margin-top: -40px;
+    height: 100px;
+
+     /* Ajuster la largeur des images pour créer une disposition à deux colonnes */
+  }
+
+  .right-contain {
+    display: none; /* Cacher le div à droite sur les écrans plus petits */
+  }
+
+  .two-div-section {
+    flex-direction: column; /* Rétablir la direction de la colonne pour les écrans plus petits */
+    display: flex; /* Utiliser flex au lieu de grid sur les écrans plus petits */
+  }
+
+  .container-FREEIN h2 {
+    line-height: 40px; /* Ajuster la hauteur de ligne pour les écrans plus petits */
+  }
+
+  .container-FREEIN h5 {
+    font-size: 16px; /* Ajuster la taille de la police pour les écrans plus petits */
+    line-height: 24px; /* Ajuster la hauteur de ligne pour les écrans plus petits */
+    margin-top: 10px; /* Ajuster la marge pour les écrans plus petits */
+  }
+
+  .container-FREEIN p {
+    margin-top: 15px; /* Ajuster la marge pour les écrans plus petits */
+  }
+
+  .container-FREEIN,
+  .right-contain {
+    flex: 0; /* Annuler le flex pour occuper toute la largeur en colonne */
+  }
+  
+}
+/* Media query pour les écrans plus grands */
+@media only screen and (min-width: 768px) {
+  .second2-div {
+    display: none; /* Masquer la nouvelle div sur les écrans plus grands */
+  }
+}
+/* end freein */
+
+
+.ribbon{
+position: absolute;
+}
+.footer {
+    position: relative;
+  width: 100%;
+  background: #cccccc2b;
+
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 60px;
+}
+.footer-row .footer-col h4 {
+    font-family:'Poppins';
+    line-height: 30px;
+    font-weight:bold;
+    font-size: 20px;
+    color: #4b5b68;
+}
+.footer-col .links {
+  margin-top: 20px;
+}
+.footer-col .linkss ,.links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-col .links, li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+.footer-col .links li a:hover {
+  color: #fff;
+}
+.footer-col p {
+  margin: 80px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489c6;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+.footer-col input::placeholder {
+  color: #ccc;
+}
+.footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+.footer-col form button:hover {
+  background: #cecccc;
+}
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer-col .icons i {
+  color: #afb6c7;
+}
+.footer-col .icons i:hover {
+  color: #fff;
+}
+.links i{
+    color: #6fbf52;
+}
+.linkss a::before {
+    
+        font-family:"FontAwesome";
+        content: "\f00c";
+        color: rgba(0, 128, 0, 0.67);
+        margin-right: 30px;
+    
+}
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+  .footer-col form {
+    display: block;
+  }
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
+}
+.under-footer{
+    display:flex;
+    justify-content: space-between;
+    margin: 20px;
+    opacity: 0.4;
+}
+
+.icons-left i{
+    padding-right: 15px;
+   
+}

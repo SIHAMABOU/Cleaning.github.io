@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- Styles Swiper -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- JS Swiper -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Document</title>  
+</head>
+
+
+<body>
+ 
+
+    
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          
+          <!-- Bouton de bascule pour les petits écrans -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M3.646 4.146a.5.5 0 0 1 .708 0L8 7.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708M1 11.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </button>
+  
+        
+          <!-- Contenu de la barre de navigation -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            
+            <!-- Informations à gauche -->
+            <div class="info-left navbar-text">
+              <i class="fas fa-location-dot"></i> 3261 Anmoore Road Brooklyn, NY 11230
+            </div>
+            <div class="info-left navbar-text">
+              <i class="fa-regular fa-clock"></i> 8:00am - 10:00pm Mon - Sun
+            </div>
+            <div class="info-left navbar-text">
+              <i class="fa-solid fa-phone-volume"></i> 800-123-4567
+            </div>
+            
+            <!-- Icônes sociales -->
+            <div class="social-icons">
+              <i class="fab fa-youtube"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            
+            <!-- Bouton de citation -->
+           
+          </div>
+          <button class="button navbar-btn">
+            <svg viewBox="0 0 448 512" class="bell"><path d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4C64 278.6 78.5 322.7 106.8 358.1L121.7 376c5.8 7.2 6.9 17.1 2.9 25.4-4 8.3-12.4 13.6-21.6 13.6H24c-9.2 0-17.6-5.3-21.6-13.6-4-8.3-2.9-18.2 2.9-25.4l14.9-18.6C48.5 351.1 64 307 64 261.6V228c0-75.8 55.5-138.6 128-150.1V32c0-17.7 14.3-32 32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"></path></svg>
+            GET A QUOTE
+          </button>
+          
+        </div>
+      
+      </nav>
+    
+ 
+  
+
+  
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" width="150" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT US</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              SERVICES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Pages 1</a></li>
+              <li><a class="dropdown-item" href="#">Pages 2</a></li>
+              <li><a class="dropdown-item" href="#">Pages 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FAQS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TESTIMONIAL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SHOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACTS</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div id="banner">
+  
+  <img class="banner-img" src="/images/11.jpg" alt="Banner Print-it">
+  <p>SO FRESH & SO CLEAN... <br> WE PROMISE! </p>
+  <button >
+    <span>Free Estimate</span>
+</button>
+  <div class="arrow">
+    <i class="fa-solid fa-arrow-left arrow_left "></i>
+    <i class="fa-solid fa-arrow-right arrow_right "></i>
+  </div>
+  
+  <div class="dots"></div>
+  
+</div>
+<section class="container sec">
+  <h1 class="h-lg">Our Cleaning Services</h1>
+  <div class="pg">
+    <p>Let us use our years of experience, skilled employees, and advanced procedures to ensure a clean and healthy environment for your employees, customers and guests.</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
+        <div class="card-body">
+          <h5 class="card-title">Residential Cleaning</h5>
+          <ul class="list-unstyled">
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+          </ul>
+          <button class="btn btn-primary hoveR">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
+        <div class="card-body">
+          <h5 class="card-title">Residential Cleaning</h5>
+          <ul class="list-unstyled">
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+          </ul>
+          <button class="btn btn-primary hoveR">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
+        <div class="card-body">
+          <h5 class="card-title">Residential Cleaning</h5>
+          <ul class="list-unstyled">
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+          </ul>
+          <button class="btn btn-primary hoveR">Read More</button>
+        </div>
+      </div>
+    </div>
+    <!-- Ajoutez d'autres colonnes avec le même format pour chaque service -->
+  </div>
+</section>
+
+
+
+
+<!--Start About Section -->
+<section class="about">
+<div class="containner">
+<h2>About Our Company</h2>
+<ul class="list-about">
+  <li> <a href="">We Provide</a></li>
+  <li> <a href="">How it Works</a></li>
+  <li> <a href="">With Us</a></li>
+</ul>
+<div class="box">
+<p>Cleaning can be a chore and we know you have many choices when you consider hiring a maid service. Because of that, we are constantly thriving to improve our already high standards to have you see us as the absolute best in the industry.
+   It’s not enough to have trust in the cleaning crew that you let into your home… you also have to trust that they will perform a first-class cleaning job for you.
+  </p>
+</div>
+  <h4>We Provide</h4>
+  <div class="list-provide">
+<ul>
+  <li class="check">One-off, weekly or fortnightly visits</li>
+  <li class="check">One-off, weekly or fortnightly visits</li>
+  <li class="check">One-off, weekly or fortnightly visits</li>
+</ul>
+<ul>
+  <li class="check">One-off, weekly or fortnightly visits</li>
+  <li class="check">One-off, weekly or fortnightly visits</li>
+  <li class="check">One-off, weekly or fortnightly visits</li>
+</ul>
+</div>
+</div>
+<!-- <div class="right">
+  <img src="images/index-right-img.png" alt="">
+</div> -->
+</section>
+<!--End About Section -->
+<!-- Start REASONS Section -->
+<section class="Reasons">
+ 
+  <div class="list-reasons">
+    <h1>Reasons to <span>Choose Us</span></h1>
+    <p>Behind our commitment to excellence are few key attributes that define who we are and what makes us different from any other.</p>
+    <div class="btw">
+    <div class="eng">
+      <div class="flower"></div>
+    <div>
+      <h4 >Top-Rated Company</h4>
+      <p>We hold a successful track record of satisfying our customers and getting back their bond money.</p>
+    </div>
+  </div>
+  <div class="eng">
+    <div class="flower"></div>
+  <div>
+    <h4 >Top-Rated Company</h4>
+    <p>We hold a successful track record of satisfying our customers and getting back their bond money.</p>
+  </div>
+  </div>
+  <div class="eng">
+    <div class="flower"></div>
+  <div>
+    <h4 >Top-Rated Company</h4>
+    <p>We hold a successful track record of satisfying our customers and getting back their bond money.</p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div >
+    <img src="images/index-img-1.jpg" alt="">
+  </div>
+  </section>
+<!-- END REASONS Section -->
+<!--Start FEEIN Section -->
+<section class="FREEIN">
+  <div class="two-div-section">
+  <div class="container-FREEIN">
+  <h2> We Offer<span style="color: rgba(0, 115, 255, 0.883);"> FreeIn-Home</span> <br> Estimates,So Why Wait?</h2>
+  <h5>Ready for a cleaner facility</h5>
+  <div class="box1">
+  <p>When it comes to gauging a complete and effective cleaning and sanitation solution, from a cost perspective, it is important to ensure the accuracy of all costs involved. <br> <br> This cost calculator is provided to clients to assist you in establishing the estimated cleaning cost for your company:
+    </p>
+  </div>
+   
+  </div>
+  
+  <div class="right-contain">
+    <div class="second-div gallery">
+      <!-- Galerie d'images dans la deuxième div -->
+      <img src="images/index-service-house-1.jpg" alt="Image 1">
+      <img src="images/index-service-house-2.jpg" alt="Image 2">
+      <img src="images/index-service-house-3.jpg" alt="Image 3">
+      <img src="images/index-service-house-4.jpg" alt="Image 4">
+    </div>
+  </div>
+  <div class="second2-div" >
+    <!-- Galerie d'images dans la deuxième div -->
+    <img src="images/index-service-house-1.jpg" alt="Image 1">
+    <img src="images/index-service-house-2.jpg" alt="Image 2">
+    <img src="images/index-service-house-3.jpg" alt="Image 3">
+    <img src="images/index-service-house-4.jpg" alt="Image 4">
+  </div>
+</div>
+  </section>
+
+
+<!-- END FREEIN Section -->
+<!-- Start PRODUCT Section -->
+<section class="Reasons">
+  <div >
+    <img src="images/index-img-2.jpg" alt="">
+  </div>
+  <div class="list-reasons">
+    <h1><span>Natural</span> Cleaning Products</h1>
+    <p>We feel good about cleaning with our self-formulated, natural products that are better for the environment</p>
+    <div class="btw">
+    <div class="eng">
+      <div class="flower"></div>
+    <div>
+      <h4 >100% Safe & Organic</h4>
+      <p>We combine high concentrates of pure organic essential oils with quality plant-derived ingredients.</p>
+    </div>
+  </div>
+  <div class="eng">
+    <div class="flower"></div>
+  <div>
+    <h4 >We Care About The Earth</h4>
+    <p>All of our packaging, bottles, cleaning equipment, even our uniforms come from recycled, fairtrade or low impact origins.</p>
+  </div>
+  </div>
+  
+  </div>
+  </div>
+  </section>
+  
+  <!-- END PRODUCT Section -->
+
+
+<!--Start Reviews Section -->
+<section class="reviews" id="reviews">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="pg reviews-content">
+          <h1 class="h-lg">Happy Customers, Happy Homes</h1>
+          <p>Let us use our years of experience, skilled employees, and advanced procedures to ensure a clean and healthy environment for your employees, customers, and guests.</p>
+        </div>
+        <div class="pf">
+          <img src="images/p1.jpg" alt="">
+        </div>
+        <div class="quot-right">
+          <img src="images/right-quote-sign.png" alt="">
+        </div>
+        <div class="quot-left">
+          <img src="images/left-quote.png" alt="">
+        </div>
+        <p class="nom"><span>Jesse Hudson</span> Dothan, Alabama</p>
+
+      </div>
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="pg reviews-content">
+          <h1 class="h-lg">Happy Customers, Happy Homes</h1>
+          <p>Let us use our years of experience, skilled employees, and advanced procedures to ensure a clean and healthy environment for your employees, customers, and guests.</p>
+        </div>
+        <div class="pf">
+          <img src="images/p1.jpg" alt="">
+        </div>
+        <div class="quot-right">
+          <img src="images/right-quote-sign.png" alt="">
+        </div>
+        <div class="quot-left">
+          <img src="images/left-quote.png" alt="">
+        </div>
+        <p class="nom"><span>Jesse Hudson</span> Dothan, Alabama</p>
+
+      </div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</section>
+<!-- End Reviews Section -->
+
+
+<!-- start News Section -->
+<section class="container sec">
+  <h1 class="h-lg">Our Cleaning Services</h1>
+  <div class="pg">
+    <p>Let us use our years of experience, skilled employees, and advanced procedures to ensure a clean and healthy environment for your employees, customers and guests.</p>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
+        <div class="card-body">
+          <h5 class="card-title">Residential Cleaning</h5>
+          <ul class="list-unstyled">
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+          </ul>
+          <button class="btn btn-primary hoveR">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
+        <div class="card-body">
+          <h5 class="card-title">Residential Cleaning</h5>
+          <ul class="list-unstyled">
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+          </ul>
+          <button class="btn btn-primary hoveR">Read More</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card">
+        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
+        <div class="card-body">
+          <h5 class="card-title">Residential Cleaning</h5>
+          <ul class="list-unstyled">
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+            <li class="check-icon">Hard surface Cleaning</li>
+          </ul>
+          <button class="btn btn-primary hoveR">Read More</button>
+        </div>
+      </div>
+    </div>
+    <!-- Ajoutez d'autres colonnes avec le même format pour chaque service -->
+  </div>
+</section>
+
+<!-- End News Section -->
+
+
+
+
+
+
+
+
+<!-- Start COUNT Section -->
+<section class="count">
+
+<div class="block">
+
+<div class="block-1">
+
+<div class="block-2">
+  <div class="block-31">
+   <img src="images/rating.png" alt="">
+  </div>
+  <span class="counter-item-number">
+    <span data-to="1500" data-speed="1000">0</span>+
+  </span>
+  <div class="counter-item-text">
+    Happy Customers
+  </div>
+  </div>
+
+  <div class="block-2">
+    <div class="block-31">
+     <img src="images/document.png" alt="">
+    </div>
+    <span class="counter-item-number">
+      <span data-to="100" data-speed="1000">0%</span>+
+    </span>
+    <div class="counter-item-text">
+      Service Guarantee
+    </div>
+    </div>
+
+    <div class="block-2">
+      <div class="block-31">
+       <img src="images/group.png" alt="">
+      </div>
+      <span class="counter-item-number">
+        <span data-to="30" data-speed="1000">0</span>+
+      </span>
+      <div class="counter-item-text">
+        Cleaners
+      </div>
+      </div>   
+      
+      <div class="block-2">
+        <div class="block-31">
+         <img src="images/cleaning.png" alt="">
+        </div>
+        <span class="counter-item-number">
+          <span data-to="1000" data-speed="1000">0</span>
+        </span>
+        <div class="counter-item-text">
+          Cleans Completed
+        </div>
+        </div>   
+</div>
+</div>
+
+
+
+
+
+</section>
+<!-- End COUNT Section -->
+
+
+<section class="sec">
+  <h1 class="h-lg">Choose Your Pricing Plan</h1>
+<div class="pg">
+<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore excepturi, expedita odit doloremque error rerum aut quam quaerat corporis fugit natus! Cum corrupti nam quam maiores dolorem iste. Vel, earum.</p>
+<p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore excepturi, expedita odit doloremque error rerum aut quam quaerat corporis fugit natus! Cum corrupti nam quam maiores dolorem iste. Vel, earum.</p>
+
+</div>
+ 
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="footer">
+<div class="ribbon">
+<img src="images/footer-ribbon.png" alt="">
+</div>
+  <div class="footer-row">
+    <div class="footer-col">
+      <p>
+        We use natural and eco-friendly cleaning products and have a customer satisfaction guarantee
+      </p>
+      <h4>Newsletter</h4>
+      <form action="#">
+        <input type="text" placeholder="Your email" required>
+        <button type="submit">SUBSCRIBE</button>
+      </form>
+      
+    </div>
+    <div class="footer-col">
+      <h4>Cleaning Service</h4>
+      <ul class="linkss">
+        <li><a href="#">Apartment Cleaning</a></li>
+        <li><a href="#">House Cleaning</a></li>
+        <li><a href="#">Move In / Move Out</a></li>
+        <li><a href="#">Carpet Cleaning</a></li>
+        <li><a href="#">After Renovation</a></li>
+        <li><a href="#">Curtain Cleaning</a></li>
+        <li><a href="#">Window Cleaning</a></li>
+        <li><a href="#">Commercial Cleaning</a></li>
+        <li><a href="#">Residential Cleaning</a></li>
+
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Information</h4>
+      <ul class="links">
+        <li><i class="fas fa-location-dot"></i>
+          <a href="#">3261 Anmoore Road Brooklyn, NY 11230</a></li>
+        <li> 
+                 <i class="fa-solid fa-phone-volume"></i>
+          <a href="#">800-123-4567, Fax: 718-724-3312</a></li>
+        <li><i class="fa-regular fa-envelope"></i>
+          <a href="#">officeone@youremail.com</a></li>
+        <li> <i class="fa-regular fa-clock"></i>
+          <a href="#">Mon-Fri: 9:00 am – 5:00 pm <br>
+          Sat-Sun: 11:00 am – 16:00 pm</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="under-footer">
+<div class="footer-right">
+  &copy;2024 Cleaning Services. All rights reserved 
+</div>
+<div class="icons-left">
+  <i class="fa-brands fa-facebook-f"></i>
+  <i class="fa-brands fa-twitter"></i>
+  <i class="fa-brands fa-linkedin"></i>
+</div>
+</div>
+<script src="myscript.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
+</body>
+</html>
