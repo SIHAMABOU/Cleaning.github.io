@@ -10,29 +10,24 @@ body {
   line-height: 28px;
   font-weight: 400;
 }
-header {
-  background-color: #afadad42;
+.info-left{
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: large;
 }
-.container {
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  color: #afadad;
-  font-size: medium;
-  align-items: center;
-}
-.contain{
-  display: flex;
-}
-.contain .info-left{
-padding-left: 10px;
-}
+
 .info-left i {
   color: rgba(30, 165, 30, 0.599);
 }
-.social-icons i {
-  margin-right: 25px;
-  padding-left: 10px;
+.social-icons{
+  margin-left: 70px;
+}
+.social-icons i{
+  padding-left: 30px;
+}
+.sticky-navbar {
+  position: sticky;
+  z-index: 1000; /* Assurez-vous que la barre de navigation reste au-dessus du contenu */
 }
 
 .button {
@@ -109,7 +104,14 @@ padding-left: 10px;
     transform: rotateZ(2deg);
   }
 }
-
+.nav-item a{
+  font-weight: bold;
+  color: rgba(17, 17, 41, 0.59);
+}
+.nav-item a:hover{
+  color: rgb(46, 181, 46);
+  cursor: pointer;
+}
 
 p {
   font-family: Roboto, sans-serif;
@@ -263,12 +265,23 @@ p {
   box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
 }
 /* cleaning service */
-.sec {
-  display: grid;
-  height: 100%;
-  place-items: center;
-  text-align: center;
+
+
+
+.wrapper .carousel{
+  max-width: 1200px;
+  margin:auto;
+  padding:0 30px ;
 }
+.carousel .card{
+
+margin: 20px 0;
+box-shadow: 0px 7px 15px rgb(0, 0,0,0.2); 
+border-radius: 10px;
+}
+
+
+
 
 .h-lg {
   margin-top: 60px;
@@ -290,60 +303,95 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
-
-.slider {
-  max-width: 1100px;
-  height: 427px;
-  display: flex;
+.cardd{
+  color: white;
 }
-.slider .card {
-    position: relative;
-  flex: 1;
+.carde{
+  background-color: #9998980a;
+  height: 550px;
+}
+.card-body{
   margin: 30px;
-  justify-content: space-around;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 30px 30px rgba(214, 213, 213, 0.555);
 }
 
-.slider .card .img {
+.cardee {
+  position: relative;
+}
+
+.cardee::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+
+
+.cardee .cont {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.cardee:hover .cont {
+  opacity: 1;
+  height: 100%;
+}
+
+.cardee .icon-link {
+  font-size: 24px; /* Adjust the size of the icon as needed */
+  color: #fff; /* Icon color */
+}
+
+.cardee .card-img-top {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-text{
+  color: #4b5b68bd;
+}
+.card-title{
+  font-family:'Poppins';
+    font-weight:bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: #4b5b68;
+}
+.card img {
   height: 100px;
   margin: 16px;
-  width: calc(100% - 32px);
   border-radius: 10px;
   transition: all 0.2s ease;
   overflow: hidden;
 }
-.slider .card .img:hover {
+.card img:hover {
   filter: brightness(75%);
+  transform: scale(1.1); /* Scale up by 10% on hover */
+
 }
-.slider .card .img img {
-  height: 100%;
-  width: 100%;
+.card img {
   object-fit: contain;
   transition: all 0.2s ease-in-out;
 }
 
-.slider .card .img img:hover {
-  transform: scale(1.1); /* Scale up by 10% on hover */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
 
-.slider .card .content {
-  padding: 10px 20px;
-}
-.card .content .title {
-    font-family:'Poppins';
-    font-weight:bold;
-    font-size: 20px;
-    color: #4b5b68;
-}
-.card .content .sub-title {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #677d8f;
-}
+
+
 .hoveR {
   border-radius: 20px;
   padding: 10px;
@@ -358,7 +406,7 @@ p {
 .check-icon {
   list-style-type: none; /* Supprimez le style de puce par défaut */
   position: relative;
-  /* Espace pour l'icône à gauche du texte */
+  padding-left: 20px; 
 }
 
 .check-icon:before {
@@ -369,54 +417,29 @@ p {
   color: #1061c491; /* Couleur de l'icône (changez-la selon vos besoins) */
 }
 /* Ajout des règles pour les écrans plus petits */
-@media only screen and (max-width: 768px) {
-  .h-lg,.pg {
-    font-size: 1.5rem;
-  }
 
-  .slider .card {
-    width: calc(50% - 20px);
-  }
-}
 
 /* Ajout des règles pour les écrans encore plus petits */
-@media only screen and (max-width: 480px) {
-  .slider .card {
-    width: calc(100% - 20px);
-  }
-}
+
 /* END cleaning service */
 
 /* Start about Section  */
 .about{
     background: url(images/block-bg-1.jpg) no-repeat;
-    height: 500px;
     background-position: center;
     background-size: cover;
     position: relative;
     overflow: hidden;
 }
-.about .right{
-right: -6%;
-margin-bottom: 30%;
-}
-.containner{
-    margin-top: 70px;
-    margin-left: 50px;
-}
-.containner h2{
+
+
+.container h2,.container h4{
     font-family:'Poppins';
     line-height: 56px;
     font-weight: 700;
     color: #4b5b68;
 }
-.containner h4{
-    font-family:'Poppins';
-    line-height: 30px;
-    font-weight:bold;
-    font-size: 20px;
-    color: #4b5b68;
-}
+
 .list-about{
     display: flex;
 }
@@ -436,9 +459,7 @@ margin-bottom: 30%;
 }
 
 .box {
-    box-sizing: border-box;
-    width: 60%; /* Vous pouvez ajuster la largeur selon vos besoins */
-    margin: 20px 0; /* Vous pouvez ajuster la marge selon vos besoins */
+    box-sizing: border-box; 
   }
   
   .box p {
@@ -504,10 +525,6 @@ margin-bottom: 30%;
       flex-direction: row;
       align-items: initial;
   }
-
-  .flower {
-      margin-right: 30px;
-  }
 }
 
 /* Media query spécifique pour les écrans petits (max-width: 767px) */
@@ -526,7 +543,8 @@ margin-bottom: 30%;
   font-family: "FontAwesome";
   content: "\f06c";
   color: rgba(0, 128, 0, 0.67);
-  margin-right: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .list-reasons p {
@@ -622,19 +640,26 @@ margin-bottom: 30%;
     position: absolute;
     width: 80px;
     height: 90px;
-    bottom: 20%;
     left: 40px;
   }
+
+  @media only screen and (max-width: 767px) {
+    .quot-right,
+    .quot-left {
+     display: none;
+    }
+    .pf img {
+      left: 30%;
+    }
+    .swiper-wrapper .nom{
+      left: 22%;
+    }
+  }  
   /* <!-- End Reviews Section --> */
 
-  .cardd {
-    position: relative;
-    overflow: hidden;
-  }
+  
 
-  .card-img-top {
-    transition: all 1s ease-in-out;
-  }
+ 
 
   .cardd:hover .card-img-top {
     transform: scale(1.1);
@@ -655,59 +680,48 @@ margin-bottom: 30%;
     transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
-  .cardd:hover .cont {
-    opacity: 1;
-    height: 100%;
-  }
+  
 
   .icon-link {
     font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
     color: #fff; /* Couleur de l'icône */
   }
-.card-body .card-title{
+  
+  .card-body .title{
     font-family:'Poppins';
     font-weight:bold;
     font-size: 20px;
     color: #4b5b68;
 }
 
-.card-body  p{
-    color: #4b5b68bd;
+.card-body  .sub-title{
+    color: #0d1116c0;
 }
-.card-body{
-    background-color: #4b5b680e;
-}
+
 /* <!-- start count Section --> */
 .count{
-    height: 600px;
+    height: 500px;
+}
+
+.block-1{
+  padding-right: 15px;
+    padding-left: 35px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .block{
-    position: relative;
    background: url(images/block-bg-5.jpg) no-repeat;
-   top: 20%;
    height: 70%;
    background-size: cover;
 }
-.block-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-.block-1{
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    position: relative;
-    top: 30%;
-}
+
 .block-31 img{
     width: 70px;
 }
 .block-31::after{
 content: '';
 display: block;
-margin: 26px auto;
+margin: 26px;
 height: 2px;
 width: 35px;
 background-color: #6fbf52;
@@ -720,12 +734,17 @@ background-color: #6fbf52;
     color: #fff;
 }
 
-.counter-item-text{
+.counter-item-name{
     color: #fff;
-    padding-top: 10px;
-
-}
-
+  }
+  @media (min-width: 768px) {
+   
+    .block {
+      position: relative;
+      top:25%;
+    }
+  }
+  
 /* <!-- END count Section --> */
 /* freein */
 .FREEIN{
@@ -972,3 +991,5 @@ position: absolute;
     padding-right: 15px;
    
 }
+
+

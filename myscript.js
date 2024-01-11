@@ -162,12 +162,7 @@ function preloadImages() {
 	displayDots();
 
 
-	$(".slider").owlCarousel({
-		loop: true,
-		autoplay: true,
-		autoplayTimeout: 2000, //2000ms = 2s;
-		autoplayHoverPause: true,
-	});
+	
 
 //Review JS Code
 
@@ -209,3 +204,24 @@ function preloadImages() {
 });
 
 
+$(".carousel").owlCarousel({
+	margin:10,
+	loop:true,
+	autoplay:true,
+	autoplayTimeout:2000,
+	autoplayHoverPause:false,
+	responsive:{
+		0:{
+			items:1,
+			nav:false
+		},
+		600:{
+			items:2,
+			nav:false
+		},
+		1000:{
+			items:3,
+			nav:false
+		},
+	}
+})

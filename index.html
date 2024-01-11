@@ -10,14 +10,14 @@
 
 <!-- JS Swiper -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Document</title>  
 </head>
 
@@ -26,7 +26,7 @@
  
 
     
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light  bg-light">
         <div class="container-fluid">
           
           <!-- Bouton de bascule pour les petits écrans -->
@@ -38,7 +38,7 @@
   
         
           <!-- Contenu de la barre de navigation -->
-          <div class="collapse navbar-collapse" id="navbarContent">
+          <div class="collapse navbar-collapse " id="navbarContent" >
             
             <!-- Informations à gauche -->
             <div class="info-left navbar-text">
@@ -50,15 +50,13 @@
             <div class="info-left navbar-text">
               <i class="fa-solid fa-phone-volume"></i> 800-123-4567
             </div>
-            
-            <!-- Icônes sociales -->
             <div class="social-icons">
+            <!-- Icônes sociales -->
               <i class="fab fa-youtube"></i>
               <i class="fab fa-instagram"></i>
               <i class="fa-brands fa-facebook-f"></i>
               <i class="fa-brands fa-twitter"></i>
-            </div>
-            
+          </div>
             <!-- Bouton de citation -->
            
           </div>
@@ -70,23 +68,18 @@
         </div>
       
       </nav>
-    
- 
-  
 
-  
-  
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light  bg-white sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="images/logo.png" width="150" alt="logo">
+        <img src="images/logo.png" width="180" alt="logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
+      <div class="collapse navbar-collapse"  id="navbarNav" style="margin-left: 30px;">
+        <ul class="navbar-nav ">
+          <li class="nav-item" >
             <a class="nav-link" href="#">HOME</a>
           </li>
           <li class="nav-item">
@@ -102,11 +95,19 @@
               <li><a class="dropdown-item" href="#">Pages 3</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">BLOG</a>
-          </li>
+        
           <li class="nav-item">
             <a class="nav-link" href="#">FAQS</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              BLOG
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Pages 1</a></li>
+              <li><a class="dropdown-item" href="#">Pages 2</a></li>
+              <li><a class="dropdown-item" href="#">Pages 3</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">TESTIMONIAL</a>
@@ -149,93 +150,146 @@
   <div class="dots"></div>
   
 </div>
-<section class="container sec">
-  <h1 class="h-lg">Our Cleaning Services</h1>
-  <div class="pg">
-    <p>Let us use our years of experience, skilled employees, and advanced procedures to ensure a clean and healthy environment for your employees, customers and guests.</p>
+<!-- our service -->
+
+<h1 class="h-lg">Our Cleaning Services</h1>
+<div class="pg">
+<p >Let us use our years of experience, skilled employees, and advanced procedures to ensure a clean and healthy environment for your employees, customers and guests.</p>
+</div>
+ <div class="wrapper">
+  <div class="carousel owl-carousel">
+    <div class="card card-1">
+      <div class="cardd" >
+        <img src="images/commerce.png" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="title">
+            Window Cleaning
+        </div>         
+         <div class="sub-title">
+            <ul>
+              <li class="check-icon">Hard surface Cleaning</li>
+              <li class="check-icon">Carpet Cleaning</li>
+              <li class="check-icon">Dust all furniture</li>
+            </ul>
+          </div>
+          <button class="hoveR">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-2">
+<div class="cardd" >
+  <img src="images/window.png" class="card-img-top" alt="...">
+  <div class="card-body d-flex flex-column align-items-center justify-content-center">
+    <div class="title">
+      Window Cleaning
+  </div>         
+   <div class="sub-title">
+      <ul>
+        <li class="check-icon">Hard surface Cleaning</li>
+        <li class="check-icon">Hard surface Cleaning</li>
+        <li class="check-icon">Hard surface Cleaning</li>
+      </ul>
+    </div>
+    <button class="hoveR">Read More</button>
   </div>
-  <div class="row">
-    <div class="col-md-6 col-lg-3">
-      <div class="card">
-        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
-        <div class="card-body">
-          <h5 class="card-title">Residential Cleaning</h5>
-          <ul class="list-unstyled">
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-          </ul>
-          <button class="btn btn-primary hoveR">Read More</button>
+</div>
+    </div>
+    <div class="card card-3">
+      <div class="cardd" >
+        <img src="images/commerce.png" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="title">
+            Window Cleaning
+        </div>         
+         <div class="sub-title">
+            <ul>
+              <li class="check-icon">Hard surface Cleaning</li>
+              <li class="check-icon">Hard surface Cleaning</li>
+              <li class="check-icon">Hard surface Cleaning</li>
+            </ul>
+          </div>
+          <button class="hoveR">Read More</button>
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="card">
-        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
-        <div class="card-body">
-          <h5 class="card-title">Residential Cleaning</h5>
-          <ul class="list-unstyled">
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-          </ul>
-          <button class="btn btn-primary hoveR">Read More</button>
+    <div class="card card-4">
+
+      <div class="cardd" >
+        <img src="images/resid.png" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+          <div class="title">
+            Window Cleaning
+        </div>         
+         <div class="sub-title">
+            <ul>
+              <li class="check-icon">Hard surface Cleaning</li>
+              <li class="check-icon">Hard surface Cleaning</li>
+              <li class="check-icon">Hard surface Cleaning</li>
+            </ul>
+          </div>
+          <button class="hoveR">Read More</button>
         </div>
       </div>
+
     </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="card">
-        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
-        <div class="card-body">
-          <h5 class="card-title">Residential Cleaning</h5>
-          <ul class="list-unstyled">
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-          </ul>
-          <button class="btn btn-primary hoveR">Read More</button>
-        </div>
-      </div>
-    </div>
-    <!-- Ajoutez d'autres colonnes avec le même format pour chaque service -->
+
   </div>
-</section>
+ </div>
 
 
 
 
 <!--Start About Section -->
 <section class="about">
-<div class="containner">
-<h2>About Our Company</h2>
-<ul class="list-about">
-  <li> <a href="">We Provide</a></li>
-  <li> <a href="">How it Works</a></li>
-  <li> <a href="">With Us</a></li>
-</ul>
-<div class="box">
-<p>Cleaning can be a chore and we know you have many choices when you consider hiring a maid service. Because of that, we are constantly thriving to improve our already high standards to have you see us as the absolute best in the industry.
-   It’s not enough to have trust in the cleaning crew that you let into your home… you also have to trust that they will perform a first-class cleaning job for you.
-  </p>
-</div>
-  <h4>We Provide</h4>
-  <div class="list-provide">
-<ul>
-  <li class="check">One-off, weekly or fortnightly visits</li>
-  <li class="check">One-off, weekly or fortnightly visits</li>
-  <li class="check">One-off, weekly or fortnightly visits</li>
-</ul>
-<ul>
-  <li class="check">One-off, weekly or fortnightly visits</li>
-  <li class="check">One-off, weekly or fortnightly visits</li>
-  <li class="check">One-off, weekly or fortnightly visits</li>
-</ul>
-</div>
-</div>
-<!-- <div class="right">
-  <img src="images/index-right-img.png" alt="">
-</div> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>About Our Company</h2>
+        <ul class="list-about">
+          <li><a href="#">We Provide</a></li>
+          <li><a href="#">How it Works</a></li>
+          <li><a href="#">With Us</a></li>
+        </ul>
+        <div class="box">
+          <p>
+            Cleaning can be a chore and we know you have many choices when you consider hiring a maid service. Because of that, we are constantly thriving to improve our already high standards to have you see us as the absolute best in the industry. It’s not enough to have trust in the cleaning crew that you let into your home… you also have to trust that they will perform a first-class cleaning job for you.
+          </p>
+        </div>
+        <h4>We Provide</h4>
+        <div class="list-provide">
+          <div class="row">
+            <div class="col-sm-6">
+              <ul>
+                <li class="check">One-off, weekly or fortnightly visits</li>
+                <li class="check">One-off, weekly or fortnightly visits</li>
+                <li class="check">One-off, weekly or fortnightly visits</li>
+              </ul>
+            </div>
+            <div class="col-sm-6">
+              <ul>
+                <li class="check">One-off, weekly or fortnightly visits</li>
+                <li class="check">One-off, weekly or fortnightly visits</li>
+                <li class="check">One-off, weekly or fortnightly visits</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Uncomment the following div if you want to add an image to the right -->
+      <div class="col-md-6">
+        <div class="right">
+          <img src="images/index-right-img.png" alt="" class="img-fluid d-block">
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+      
+    </div>
+  </div>
 </section>
+
 <!--End About Section -->
 <!-- Start REASONS Section -->
 <section class="Reasons">
@@ -268,7 +322,7 @@
   </div>
   </div>
   <div >
-    <img src="images/index-img-1.jpg" alt="">
+    <img src="images/index-img-1.jpg" alt="" class="img-fluid d-block">
   </div>
   </section>
 <!-- END REASONS Section -->
@@ -385,57 +439,110 @@
 
 
 <!-- start News Section -->
-<section class="container sec">
-  <h1 class="h-lg">Our Cleaning Services</h1>
-  <div class="pg">
-    <p>Let us use our years of experience, skilled employees, and advanced procedures to ensure a clean and healthy environment for your employees, customers and guests.</p>
+<h1 class="h-lg">Cleaning Industry News</h1>
+<div class="pg">
+<p >We write about industry developments, training, health and safety, eco-friendly cleaning products, recycling practices and advice for working with professional cleaners.</p>
+</div>
+ <div class="wrapper">
+  <div class="carousel owl-carousel">
+    <div class="carde card-1 " >
+      <div class="carde">
+        <div class="cardee">
+        <img src="images/blog1.jpg" class="card-img-top" >
+    
+        <div class="cont">
+          <a href="">
+            <i class="fas fa-link icon-link"></i>
+          </a>
+        </div>
+      </div>
+        <div class="card-body" >
+          <h6>June 13, 2017</h6>
+
+          <h3 class="card-title">Apartment Therapy Mom Wisdom on… Taking Care</h3>
+          <p class="card-text">
+            I am still learning about my home. If you can’t do it yourself, find good service people and trea.</p>
+            <button class="hoveR">Read More</button>
+
+          </div>
+
+      </div>
+    </div>
+
+    <div class="carde card-2">
+      <div class="carde" >
+        <div class="cardee">
+        <img src="images/blog1.jpg" class="card-img-top" alt="...">
+    
+        <div class="cont">
+          <a href="">
+            <i class="fas fa-link icon-link"></i>
+          </a>
+        </div>
+      </div>
+        <div class="card-body">
+          <h6>June 13, 2017</h6>
+
+          <h3 class="card-title">Apartment Therapy Mom Wisdom on… Taking Care</h3>
+          <p class="card-text">
+            I am still learning about my home. If you can’t do it yourself, find good service people and trea.</p>
+            <button class="hoveR">Read More</button>
+
+          </div>
+
+      </div>
+    </div>
+    <div class="carde card-3">
+      <div class="carde" >
+        <div class="cardee">
+        <img src="images/blog1.jpg" class="card-img-top" alt="...">
+    
+        <div class="cont">
+          <a href="">
+            <i class="fas fa-link icon-link"></i>
+          </a>
+        </div>
+      </div>
+        <div class="card-body">
+          <h6>June 13, 2017</h6>
+
+          <h3 class="card-title">Apartment Therapy Mom Wisdom on… Taking Care</h3>
+          <p class="card-text">
+            I am still learning about my home. If you can’t do it yourself, find good service people and trea.</p>
+            <button class="hoveR">Read More</button>
+
+          </div>
+
+      </div>
+    </div>
+    <div class="carde card-4">
+      <div class="carde" >
+        <div class="cardee">
+        <img src="images/blog1.jpg" class="card-img-top" alt="...">
+    
+        <div class="cont">
+          <a href="">
+            <i class="fas fa-link icon-link"></i>
+          </a>
+        </div>
+      </div>
+        <div class="card-body">
+          <h6>June 13, 2017</h6>
+          <h3 class="card-title">Apartment Therapy Mom Wisdom on… Taking Care</h3>
+          <p class="card-text">
+            I am still learning about my home. If you can’t do it yourself, find good service people and trea.</p>
+            <button class="hoveR">Read More</button>
+
+          </div>
+
+      </div>
+
+    </div>
+
   </div>
-  <div class="row">
-    <div class="col-md-6 col-lg-3">
-      <div class="card">
-        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
-        <div class="card-body">
-          <h5 class="card-title">Residential Cleaning</h5>
-          <ul class="list-unstyled">
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-          </ul>
-          <button class="btn btn-primary hoveR">Read More</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="card">
-        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
-        <div class="card-body">
-          <h5 class="card-title">Residential Cleaning</h5>
-          <ul class="list-unstyled">
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-          </ul>
-          <button class="btn btn-primary hoveR">Read More</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="card">
-        <img src="images/resid.png" class="card-img-top" alt="Residential Cleaning">
-        <div class="card-body">
-          <h5 class="card-title">Residential Cleaning</h5>
-          <ul class="list-unstyled">
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-            <li class="check-icon">Hard surface Cleaning</li>
-          </ul>
-          <button class="btn btn-primary hoveR">Read More</button>
-        </div>
-      </div>
-    </div>
-    <!-- Ajoutez d'autres colonnes avec le même format pour chaque service -->
-  </div>
-</section>
+ </div>
+
+
 
 <!-- End News Section -->
 
@@ -447,66 +554,71 @@
 
 
 <!-- Start COUNT Section -->
+
 <section class="count">
-
-<div class="block">
-
-<div class="block-1">
-
-<div class="block-2">
-  <div class="block-31">
-   <img src="images/rating.png" alt="">
-  </div>
-  <span class="counter-item-number">
-    <span data-to="1500" data-speed="1000">0</span>+
-  </span>
-  <div class="counter-item-text">
-    Happy Customers
-  </div>
-  </div>
-
-  <div class="block-2">
-    <div class="block-31">
-     <img src="images/document.png" alt="">
-    </div>
-    <span class="counter-item-number">
-      <span data-to="100" data-speed="1000">0%</span>+
-    </span>
-    <div class="counter-item-text">
-      Service Guarantee
-    </div>
-    </div>
-
-    <div class="block-2">
-      <div class="block-31">
-       <img src="images/group.png" alt="">
-      </div>
-      <span class="counter-item-number">
-        <span data-to="30" data-speed="1000">0</span>+
-      </span>
-      <div class="counter-item-text">
-        Cleaners
-      </div>
-      </div>   
-      
-      <div class="block-2">
-        <div class="block-31">
-         <img src="images/cleaning.png" alt="">
+  
+  <div class="block ">
+    <div class="block-1">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <div class="count-item">
+            <div class="block-2">
+              <div class="block-31">
+                <img src="images/rating.png" alt="">
+              </div>
+              <span class="counter-item-number">
+                <span data-to="1500" data-speed="1000">0</span>+
+              </span>
+              <div class="counter-item-name">Happy Customers</div>
+            </div>
+          </div>
         </div>
-        <span class="counter-item-number">
-          <span data-to="1000" data-speed="1000">0</span>
-        </span>
-        <div class="counter-item-text">
-          Cleans Completed
+        
+        <div class="col-md-3 col-6">
+          <div class="count-item">
+            <div class="block-2">
+              <div class="block-31">
+                <img src="images/rating.png" alt="">
+              </div>
+              <span class="counter-item-number">
+                <span data-to="1500" data-speed="1000">0</span>+
+              </span>
+              <div class="counter-item-name">Service Guarantee</div>
+            </div>
+          </div>
         </div>
-        </div>   
-</div>
-</div>
 
+        <!-- Ajoutez les autres blocs ici avec les classes col-md-3 col-6 -->
+        <div class="col-md-3 col-6">
+          <div class="count-item">
+            <div class="block-2">
+              <div class="block-31">
+                <img src="images/rating.png" alt="">
+              </div>
+              <span class="counter-item-number">
+                <span data-to="1500" data-speed="1000">0</span>+
+              </span>
+              <div class="counter-item-name">Cleaners</div>
+            </div>
+          </div>
+        </div>
 
-
-
-
+        <div class="col-md-3 col-6">
+          <div class="count-item">
+            <div class="block-2">
+              <div class="block-31">
+                <img src="images/rating.png" alt="">
+              </div>
+              <span class="counter-item-number">
+                <span data-to="1500" data-speed="1000">0</span>+
+              </span>
+              <div class="counter-item-name">Cleans Completed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End COUNT Section -->
 
@@ -600,7 +712,7 @@
   <i class="fa-brands fa-linkedin"></i>
 </div>
 </div>
+<script src="js/swiper-bundle.min.js"></script>
 <script src="myscript.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" ></script>
 </body>
 </html>
