@@ -137,7 +137,7 @@
 
 <div id="banner">
   
-  <img class="banner-img" src="/images/11.jpg" alt="Banner Print-it">
+  <img class="banner-img" src="/images/slide-1.jpg" alt="Banner Print-it">
   <p>SO FRESH & SO CLEAN... <br> WE PROMISE! </p>
   <button >
     <span>Free Estimate</span>
@@ -247,10 +247,11 @@
       <div class="col-md-6">
         <h2>About Our Company</h2>
         <ul class="list-about">
-          <li><a href="#">We Provide</a></li>
-          <li><a href="#">How it Works</a></li>
-          <li><a href="#">With Us</a></li>
+          <li><a href="#about1" onclick="showSection('about1')">We Provide</a></li>
+          <li><a href="#about2" onclick="showSection('about2')">How it Works</a></li>
+          <li><a href="#about3" onclick="showSection('about3')">With Us</a></li>
         </ul>
+        <div id="about1">
         <div class="box">
           <p>
             Cleaning can be a chore and we know you have many choices when you consider hiring a maid service. Because of that, we are constantly thriving to improve our already high standards to have you see us as the absolute best in the industry. It’s not enough to have trust in the cleaning crew that you let into your home… you also have to trust that they will perform a first-class cleaning job for you.
@@ -276,18 +277,70 @@
           </div>
         </div>
       </div>
+      
+      <div id="about2" class="about2-column" class="container">
+        <div class="row" >
+          <div class="col-lg-6">
+            <h5 >How Cleaning Company Works</h5>
+            <p>When the weekend finally arrives, you’d much rather put your feet up while a cleaning service does the work, rather than spend your precious downtime on your hands and knees scrubbing.</p> <br>
+            <p class="visible-lg">Taking the stress out of any aspect of cleaning is what we specialise in. We will come to your premises and offer a free quote, so you know exactly what you’ll be spending</p>
+          </div>
+          <div class="col-lg-6">
+            <h6>Book online in 
+              <span class="color"> 60 seconds</span>
+            </h6> 
+            <p>Book &amp; pay online. We’ll match you with a trusted, experienced house cleaner</p><br>
+            <h6>Get a<span class="color"> 5 star cleaner</span></h6>
+            <p>Every cleaner is friendly and reliable. They’ve been background-checked &amp; rated 5-stars</p><br>
+            <h6>Manage everything<span class="color"> online</span></h6>
+            <p>Add visits, skip visits, leave notes, and book extra services laundry and oven cleaning
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="about3" class="about2-column" class="container">
+        <div class="row" >
+          <div class="col-lg-6">
+            <div class="num-box">
+            <div class="num-box-num">1.</div>
+            <h6 >We Treat Your Homes Like Ours</h6>
+            <p>At The Cleaning Company, we are fully bonded and insured, meaning you can have peace of mind when we enter your home.</p> <br>
+          </div>
+          <div class="num-box">
+            <div class="num-box-num">3.</div>
+            <h6 >Immediate Online Quotes</h6>
+            <p>Upcoming party? Expecting guests? We’ll give an immediate price quote so you can enjoy your time rather than worry about the mess.</p> <br>
+          </div>
+        </div>
+          <div class="col-lg-6">
+            <div class="num-box">
+              <div class="num-box-num">2.</div>
+              <h6 >Satisfaction Guaranteed</h6>
+              <p>Our cleaning crew are professionally trained, and if you’re ever unhappy with any area we’ve cleaned, we’ll and reclean it next day.</p> <br>
+            </div>
+            <div class="num-box">
+              <div class="num-box-num">4.</div>
+              <h6> We Are Experts</h6>
+              <p>We are dominate the industry in scale and scope with an adaptable, extensive network that consistently delivers exceptional results.</p> <br>
+            </div>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+      
       <!-- Uncomment the following div if you want to add an image to the right -->
-      <div class="col-md-6">
+      <div class="col">
         <div class="right">
-          <img src="images/index-right-img.png" alt="" class="img-fluid d-block">
+          <img src="images/index-right-img.png" alt=""class="img-fluid" >
         </div>
       </div>
     </div>
   </div>
-      </div>
       
-    </div>
-  </div>
 </section>
 
 <!--End About Section -->
@@ -322,7 +375,7 @@
   </div>
   </div>
   <div >
-    <img src="images/index-img-1.jpg" alt="" class="img-fluid d-block">
+    <img src="images/index-img-1.jpg" alt="" class="img-fluid mx-auto">
   </div>
   </section>
 <!-- END REASONS Section -->
@@ -335,6 +388,9 @@
   <div class="box1">
   <p>When it comes to gauging a complete and effective cleaning and sanitation solution, from a cost perspective, it is important to ensure the accuracy of all costs involved. <br> <br> This cost calculator is provided to clients to assist you in establishing the estimated cleaning cost for your company:
     </p>
+    <button class="button">
+      <span class="button-content"><i class="fa-solid fa-calculator"></i>Calculate Now </span>
+    </button>
   </div>
    
   </div>
@@ -348,13 +404,12 @@
       <img src="images/index-service-house-4.jpg" alt="Image 4">
     </div>
   </div>
-  <div class="second2-div" >
-    <!-- Galerie d'images dans la deuxième div -->
+  <!-- <div class="second2-div" >
     <img src="images/index-service-house-1.jpg" alt="Image 1">
     <img src="images/index-service-house-2.jpg" alt="Image 2">
     <img src="images/index-service-house-3.jpg" alt="Image 3">
     <img src="images/index-service-house-4.jpg" alt="Image 4">
-  </div>
+  </div> -->
 </div>
   </section>
 
@@ -566,7 +621,7 @@
               <div class="block-31">
                 <img src="images/rating.png" alt="">
               </div>
-              <span class="counter-item-number">
+              <span class="counter-item-number counter-1">
                 <span data-to="1500" data-speed="1000">0</span>+
               </span>
               <div class="counter-item-name">Happy Customers</div>
@@ -578,10 +633,10 @@
           <div class="count-item">
             <div class="block-2">
               <div class="block-31">
-                <img src="images/rating.png" alt="">
+                <img src="images/document.png" alt="">
               </div>
-              <span class="counter-item-number">
-                <span data-to="1500" data-speed="1000">0</span>+
+              <span class="counter-item-number counter-2">
+                <span data-to="100" data-speed="1000">0</span>%
               </span>
               <div class="counter-item-name">Service Guarantee</div>
             </div>
@@ -593,10 +648,10 @@
           <div class="count-item">
             <div class="block-2">
               <div class="block-31">
-                <img src="images/rating.png" alt="">
+                <img src="images/group.png" alt="">
               </div>
-              <span class="counter-item-number">
-                <span data-to="1500" data-speed="1000">0</span>+
+              <span class="counter-item-number counter-3">
+                <span data-to="30" data-speed="1000">0</span>+
               </span>
               <div class="counter-item-name">Cleaners</div>
             </div>
@@ -607,10 +662,10 @@
           <div class="count-item">
             <div class="block-2">
               <div class="block-31">
-                <img src="images/rating.png" alt="">
+                <img src="images/cleaning.png" alt="">
               </div>
-              <span class="counter-item-number">
-                <span data-to="1500" data-speed="1000">0</span>+
+              <span class="counter-item-number counter-4">
+                <span data-to="1000" data-speed="1000">0</span>
               </span>
               <div class="counter-item-name">Cleans Completed</div>
             </div>
@@ -702,16 +757,20 @@
     </div>
   </div>
 </section>
-<div class="under-footer">
-<div class="footer-right">
-  &copy;2024 Cleaning Services. All rights reserved 
+<div class="container">
+  <div class="row under-footer">
+    <div class="col-md-6 order-md-1 text-md-right">
+      &copy;2024 Cleaning Services. All rights reserved
+    </div>
+    <div class="col-md-6 order-md-2 text-md-left mt-2 mt-md-0 d-flex justify-content-end ic">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter "></i>
+      <i class="fab fa-linkedin"></i>
+    </div>
+    
+  </div>
 </div>
-<div class="icons-left">
-  <i class="fa-brands fa-facebook-f"></i>
-  <i class="fa-brands fa-twitter"></i>
-  <i class="fa-brands fa-linkedin"></i>
-</div>
-</div>
+
 <script src="js/swiper-bundle.min.js"></script>
 <script src="myscript.js" ></script>
 </body>

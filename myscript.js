@@ -1,14 +1,14 @@
 const slides = [
     {
-        imageUrl: "images/3.jpg",
+        imageUrl: "images/slide-1.jpg",
         tagLine: "<span>Professional Cleaning</span>SO FRESH & SO CLEAN... <br> WE PROMISE! ",
     },
     {
-        imageUrl: "images/2.jpg",
+        imageUrl: "images/slide-2.jpg",
         tagLine: "<span>Professional Cleaning</span>SO FRESH & SO CLEAN... <br> WE PROMISE! ",
     },
     {
-        imageUrl: "images/4.PNG",
+        imageUrl: "images/slide-3.jpg",
         tagLine: "<span>Professional Cleaning</span> SO FRESH & SO CLEAN... <br> WE PROMISE! ",
     },
    
@@ -180,28 +180,41 @@ function preloadImages() {
 
 
 
-  document.addEventListener('DOMContentLoaded', function () {
-	const counters = document.querySelectorAll('.counter-item-number span');
 
-	counters.forEach(counter => {
-		const target = parseInt(counter.getAttribute('data-to'));
-		const speed = parseInt(counter.getAttribute('data-speed'));
+  function startCountingAnimation(targetElement, targetValue, duration) {
+    let currentValue = 0;
+    const interval = duration / targetValue;
 
-		const updateCounter = () => {
-			const value = parseInt(counter.innerText);
-			const increment = target / (speed / 50);
+    const countingInterval = setInterval(() => {
+      currentValue++;
+      document.querySelector(targetElement).textContent = currentValue;
 
-			if (value < target) {
-				counter.innerText = Math.ceil(value + increment);
-				setTimeout(updateCounter, 100);
-			} else {
-				counter.innerText = target;
-			}
-		};
+      if (currentValue >= targetValue) {
+        clearInterval(countingInterval);
+      }
+    }, interval);
+  }
 
-		updateCounter();
-	});
-});
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Commencez l'animation lorsque l'élément est visible
+        startCountingAnimation('.counter-1 span', 1500, 1000); // Adjust parameters as needed
+        startCountingAnimation('.counter-2 span', 100, 1000);  // Adjust parameters as needed
+        startCountingAnimation('.counter-3 span', 30, 1000);   // Adjust parameters as needed
+        startCountingAnimation('.counter-4 span', 1000, 1000); // Adjust parameters as needed
+
+        // Arrêtez d'observer une fois que l'animation a commencé
+        observer.disconnect();
+      }
+    });
+  });
+
+  // Observer la section cible
+  const targetElement = document.querySelector('.count');
+  observer.observe(targetElement);
+
+
 
 
 $(".carousel").owlCarousel({
@@ -225,3 +238,13 @@ $(".carousel").owlCarousel({
 		},
 	}
 })
+
+
+function showSection(sectionId) {
+    // Masquer tous les sections sauf celle spécifiée par l'ID
+    document.querySelectorAll('.about > .container > .row > .col-md-6 > div[id^="about"]').forEach(function(section) {
+      section.style.display = 'none';
+    });
+    // Afficher la section spécifiée par l'ID
+    document.getElementById(sectionId).style.display = 'block';
+  }

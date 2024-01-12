@@ -431,7 +431,14 @@ border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
-
+.color{
+  color:#2ea2cc;
+}
+.about2-column {
+  width: 110%; 
+  margin: 0 auto; 
+  display: none;
+}
 
 .container h2,.container h4{
     font-family:'Poppins';
@@ -439,7 +446,30 @@ border-radius: 10px;
     font-weight: 700;
     color: #4b5b68;
 }
+.container h5{
+  color: #4b5b68;
+  font-weight:600;
+  font-size: 18px;
 
+}
+.container h6{
+  color: #4b5b68;
+  font-weight:600;
+  font-size: 15px;
+
+}
+.num-box {
+  position: relative;
+  padding: 0 40px 0 37px;
+}
+.num-box-num {
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+  color: #6fbf52;
+}
 .list-about{
     display: flex;
 }
@@ -462,7 +492,7 @@ border-radius: 10px;
     box-sizing: border-box; 
   }
   
-  .box p {
+  .box p ,.container p{
     margin: 0; 
     opacity: 0.5;
   }
@@ -701,17 +731,18 @@ border-radius: 10px;
 /* <!-- start count Section --> */
 .count{
     height: 500px;
+    position: relative;
 }
 
 .block-1{
-  padding-right: 15px;
-    padding-left: 35px;
-    margin-right: auto;
-    margin-left: auto;
+  position: relative;
+  margin:50px;
+  padding: 60px;
 }
 .block{
-   background: url(images/block-bg-5.jpg) no-repeat;
-   height: 70%;
+  background-color: grey;
+     background: url(images/block-bg-5.jpg) no-repeat;
+  
    background-size: cover;
 }
 
@@ -783,15 +814,14 @@ font-weight:bold;
 font-size: 20px;
 color: #4b5b68;
 }
+
 .right-contain{
   display: flex;
   position: relative;
   background-size: cover; /* Assurer que l'image de fond couvre complètement la div */
-  background: url(images/index-service-house-bg.png);
+  background: url(images/index-service-house-bg.png) no-repeat;
 }
 .second-div.gallery {
-  margin-top: 70px;
-  margin-left: 20px;
   position: absolute;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -809,24 +839,19 @@ color: #4b5b68;
 /* Media query pour les écrans plus petits */
 @media only screen and (max-width: 767px) {
   .second2-div {
-   
-  
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 100%; 
   }
+  
 
   .second2-div img {
+   
     margin-left: 40px;
-    margin-top: -40px;
+    margin-top: -50px;
     height: 100px;
-
      /* Ajuster la largeur des images pour créer une disposition à deux colonnes */
   }
-
-  .right-contain {
-    display: none; /* Cacher le div à droite sur les écrans plus petits */
-  }
-
   .two-div-section {
     flex-direction: column; /* Rétablir la direction de la colonne pour les écrans plus petits */
     display: flex; /* Utiliser flex au lieu de grid sur les écrans plus petits */
@@ -851,6 +876,26 @@ color: #4b5b68;
     flex: 0; /* Annuler le flex pour occuper toute la largeur en colonne */
   }
   
+}
+@media only screen and (max-width: 767px) {
+  .two-div-section {
+    flex-direction: column; /* Utiliser une disposition en colonne pour les écrans plus petits */
+  }
+
+  .container-FREEIN,
+  .right-contain {
+    order: 2; /* Mettre le div avec les images en bas pour les écrans plus petits */
+  }
+  .right-contain {
+    background: none;
+  }
+  .FREEIN{
+    height: 800px;
+  }
+  .second-div.gallery{
+    padding: 1% 21% 6%;
+
+  }
 }
 /* Media query pour les écrans plus grands */
 @media only screen and (min-width: 768px) {
@@ -981,15 +1026,12 @@ position: absolute;
   }
 }
 .under-footer{
-    display:flex;
-    justify-content: space-between;
-    margin: 20px;
+  padding: 10px;
     opacity: 0.4;
 }
 
-.icons-left i{
-    padding-right: 15px;
-   
+
+
+.ic i{
+  padding-left: 10px;
 }
-
-
