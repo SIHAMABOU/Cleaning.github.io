@@ -10,10 +10,10 @@ body {
   line-height: 28px;
   font-weight: 400;
 }
+
 .info-left{
   margin-left: 20px;
-  margin-top: 10px;
-  font-size: large;
+  font-size: 14px;
 }
 
 .info-left i {
@@ -31,7 +31,7 @@ body {
 }
 
 .button {
-  width: 140px;
+  width: 190px;
   height: 40px;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@ body {
   gap: 10px;
   background: linear-gradient(
     to left,
-    rgba(57, 121, 239, 0.977),
+    rgba(57, 121, 239, 0.604),
     rgba(34, 94, 204, 0.703)
   );
   border-radius: 30px;
@@ -53,7 +53,7 @@ body {
 }
 
 .bell {
-  width: 13px;
+  width: 14px;
 }
 
 .bell path {
@@ -104,9 +104,23 @@ body {
     transform: rotateZ(2deg);
   }
 }
+.navbar-nav .nav-item .nav-link:hover {
+  border-radius: 20px;
+  background-color: #08c;
+  transition:all 0.3s ease;
+}
+
+
+.dropdown-menu {
+ 
+}
+
+
+
 .nav-item a{
-  font-weight: bold;
-  color: rgba(17, 17, 41, 0.59);
+  font-weight: bolder;
+  font-size: 11px;
+  color: #08c;
 }
 .nav-item a:hover{
   color: rgb(46, 181, 46);
@@ -908,6 +922,8 @@ color: #4b5b68;
 
 .ribbon{
 position: absolute;
+left: 0;
+    top: -15px;
 }
 .footer {
     position: relative;
@@ -928,6 +944,9 @@ position: absolute;
     font-weight:bold;
     font-size: 20px;
     color: #4b5b68;
+}
+.footer-row .footer-col p{
+  margin: 100px 0;
 }
 .footer-col .links {
   margin-top: 20px;

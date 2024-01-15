@@ -1,3 +1,12 @@
+function showDropdown(element) {
+	var dropdown = element.querySelector('.dropdown-menu');
+	dropdown.style.display = 'block';
+}
+
+function hideDropdown(element) {
+	var dropdown = element.querySelector('.dropdown-menu');
+	dropdown.style.display = 'none';
+}
 const slides = [
     {
         imageUrl: "images/slide-1.jpg",
