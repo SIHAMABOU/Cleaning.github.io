@@ -181,7 +181,7 @@ function preloadImages() {
       clickable: true,
     },
 	autoplay: {
-		delay: 2000, // Le délai entre les diapositives en millisecondes
+		delay: 3000, // Le délai entre les diapositives en millisecondes
 		disableOnInteraction: true, // Désactive l'autoplay après une interaction utilisateur (par défaut à true)
 	  },
   });
@@ -230,7 +230,7 @@ $(".carousel").owlCarousel({
 	margin:10,
 	loop:true,
 	autoplay:true,
-	autoplayTimeout:2000,
+	autoplayTimeout:3000,
 	autoplayHoverPause:false,
 	responsive:{
 		0:{
@@ -257,3 +257,25 @@ function showSection(sectionId) {
     // Afficher la section spécifiée par l'ID
     document.getElementById(sectionId).style.display = 'block';
   }
+
+  window.onscroll = function () {
+	scrollFunction();
+  };
+
+  function scrollFunction() {
+	var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	  scrollToTopBtn.style.display = "block";
+	} else {
+	  scrollToTopBtn.style.display = "none";
+	}
+  }
+
+  // Fonction pour remonter en haut lors du clic sur le bouton
+  function scrollToTop() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+  }
+
+  // Ajoutez un gestionnaire d'événements au bouton de retour en haut
+  document.getElementById("scrollToTopBtn").addEventListener("click", scrollToTop);

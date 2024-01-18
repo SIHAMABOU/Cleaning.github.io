@@ -110,16 +110,9 @@ body {
   transition:all 0.3s ease;
 }
 
-
-.dropdown-menu {
- 
-}
-
-
-
 .nav-item a{
-  font-weight: bolder;
-  font-size: 11px;
+  font-weight: bold;
+  font-size: 13px;
   color: #08c;
 }
 .nav-item a:hover{
@@ -145,7 +138,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 670px;
+  min-height: 400px;
   position: relative;
 }
 
@@ -160,8 +153,8 @@ p {
 
 #banner p {
   font-family: "Roboto Slab", sans-serif;
-  font-weight: 900;
-  font-size: 50px;
+  font-weight: 700;
+  font-size: 30px;
   line-height: 66px;
   color: white;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -170,7 +163,7 @@ p {
 #banner span {
   display: block;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* Gestion des flèches du carrousel */
@@ -181,7 +174,7 @@ p {
   margin: auto;
   width: 98%;
   color: white;
-  font-size: 4rem;
+  font-size: 2rem;
   padding-right: 0.7rem;
   padding-left: 0.7rem;
   cursor: pointer;
@@ -285,47 +278,47 @@ p {
 .wrapper .carousel{
   max-width: 1200px;
   margin:auto;
-  padding:0 30px ;
+  padding:0 50px ;
+  padding-bottom: 5px;
 }
 .carousel .card{
-
-margin: 20px 0;
 box-shadow: 0px 7px 15px rgb(0, 0,0,0.2); 
 border-radius: 10px;
 }
 
-
+@media only screen and (max-width: 767px){
+  .pg p{
+    margin: 10px;
+  }
+}
 
 
 .h-lg {
-  margin-top: 60px;
-  font-size: 2.5rem;
+  margin-top: 10px;
+  font-size: 2.4rem;
   font-weight: bold;
   color: #474343;
   text-align: center;
   font-family: "Poppins", sans-serif;
   padding-bottom: 29px;
-  margin: 60 0 41px;
   background: url(/images/h.png) no-repeat bottom center;
 }
 .pg {
-  line-height: 2em;
   margin-top: 30px;
+  font-size: 16px;
   text-align: center;
   color: #474343a2;
-  max-width: 750px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
 }
-.cardd{
-  color: white;
-}
+
 .carde{
   background-color: #9998980a;
-  height: 550px;
+  height: 495px;
 }
 .card-body{
-  margin: 30px;
+  margin: 20px;
 }
 
 .cardee {
@@ -372,7 +365,7 @@ border-radius: 10px;
 
 .cardee .card-img-top {
   width: 100%;
-  height: auto;
+  height: 50%;
   display: block;
 }
 
@@ -382,31 +375,18 @@ border-radius: 10px;
 .card-title{
   font-family:'Poppins';
     font-weight:bold;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 10px;
     color: #4b5b68;
 }
-.card img {
-  height: 100px;
-  margin: 16px;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-  overflow: hidden;
-}
-.card img:hover {
-  filter: brightness(75%);
-  transform: scale(1.1); /* Scale up by 10% on hover */
 
-}
-.card img {
-  object-fit: contain;
-  transition: all 0.2s ease-in-out;
-}
+
 
 
 
 
 .hoveR {
+  margin-left: 60px;
   border-radius: 20px;
   padding: 10px;
   border-color: #1061c491;
@@ -449,8 +429,8 @@ border-radius: 10px;
   color:#2ea2cc;
 }
 .about2-column {
+  padding: 10px;
   width: 110%; 
-  margin: 0 auto; 
   display: none;
 }
 
@@ -459,14 +439,17 @@ border-radius: 10px;
     line-height: 56px;
     font-weight: 700;
     color: #4b5b68;
+    padding-left  : 10px;
 }
 .container h5{
   color: #4b5b68;
   font-weight:600;
   font-size: 18px;
+  padding-left: 10px;
 
 }
 .container h6{
+  padding-left: 10px;
   color: #4b5b68;
   font-weight:600;
   font-size: 15px;
@@ -494,7 +477,7 @@ border-radius: 10px;
 .list-about a{
     text-decoration: none;
     color: #474343;
-    font-size: 20px;
+    font-size: 17px;
     font-weight:bold;
     font-family: 'Poppins';
 }
@@ -506,8 +489,8 @@ border-radius: 10px;
     box-sizing: border-box; 
   }
   
-  .box p ,.container p{
-    margin: 0; 
+.container p{
+  margin: 10px;
     opacity: 0.5;
   }
   .list-provide{
@@ -530,6 +513,7 @@ border-radius: 10px;
 /* Start Reasons Section  */
 /* Media queries pour tous les écrans (y compris les écrans petits) */
 .Reasons {
+  margin-left: 15px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -578,7 +562,8 @@ border-radius: 10px;
   }
 
   .Reasons img {
-      margin-top: 20px; /* Ajoute une marge pour séparer l'image des listes */
+    width: 80%;
+      padding-left: 60px; /* Ajoute une marge pour séparer l'image des listes */
   }
 }
 
@@ -625,7 +610,7 @@ border-radius: 10px;
 
 .reviews {
   background: url(images/bg-review.png) no-repeat;
-  height: 600px;
+  height: 470px;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -664,8 +649,8 @@ border-radius: 10px;
 }
 .swiper-wrapper .nom{
   position: absolute;
-  left: 42%;
-  top: 170%;
+  left: 44%;
+  top: 200%;
 }
 
 .swiper-slide  span {
@@ -697,6 +682,14 @@ border-radius: 10px;
     }
     .swiper-wrapper .nom{
       left: 22%;
+      top: 170%;
+    }
+    .reviews-content p {
+      padding-left: 10px;
+
+    }
+    .reviews{
+      height: 540px;
     }
   }  
   /* <!-- End Reviews Section --> */
@@ -705,9 +698,7 @@ border-radius: 10px;
 
  
 
-  .cardd:hover .card-img-top {
-    transform: scale(1.1);
-  }
+  
 
   .cont {
     position: absolute;
@@ -733,9 +724,10 @@ border-radius: 10px;
   
   .card-body .title{
     font-family:'Poppins';
+    text-align:center;
     font-weight:bold;
     font-size: 20px;
-    color: #4b5b68;
+    color: #3c4145;
 }
 
 .card-body  .sub-title{
@@ -744,19 +736,19 @@ border-radius: 10px;
 
 /* <!-- start count Section --> */
 .count{
-    height: 500px;
+    height: auto;
     position: relative;
 }
 
 .block-1{
   position: relative;
-  margin:50px;
-  padding: 60px;
+  margin:30px;
+  padding: 30px;
 }
 .block{
   background-color: grey;
      background: url(images/block-bg-5.jpg) no-repeat;
-  
+  height:70%;
    background-size: cover;
 }
 
@@ -787,7 +779,9 @@ background-color: #6fbf52;
     .block {
       position: relative;
       top:25%;
+      justify-items: center;
     }
+    
   }
   
 /* <!-- END count Section --> */
@@ -842,7 +836,9 @@ color: #4b5b68;
   padding: 23% 21% 6%;
   gap: 10px;
 }
-
+.box1 .button{
+  margin-left: 90px;
+}
 .second-div img {
 
   position: relative;
@@ -861,7 +857,7 @@ color: #4b5b68;
 
   .second2-div img {
    
-    margin-left: 40px;
+    margin-left: 30px;
     margin-top: -50px;
     height: 100px;
      /* Ajuster la largeur des images pour créer une disposition à deux colonnes */
@@ -907,17 +903,14 @@ color: #4b5b68;
     height: 800px;
   }
   .second-div.gallery{
-    padding: 1% 21% 6%;
+    padding: 0% 18% 6%;
 
   }
 }
-/* Media query pour les écrans plus grands */
-@media only screen and (min-width: 768px) {
-  .second2-div {
-    display: none; /* Masquer la nouvelle div sur les écrans plus grands */
-  }
-}
+
 /* end freein */
+
+
 
 
 .ribbon{
@@ -1053,4 +1046,17 @@ left: 0;
 
 .ic i{
   padding-left: 10px;
+}
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
 }
