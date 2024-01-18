@@ -23,8 +23,7 @@ const slides = [
    
 ];
 
-/*=============== VARIABLES ===============*/
-//#region
+
 
 	/* Sélectionne l'élément du DOM avec la classe "dots" et le stocke dans la variable dotsContainer */
 	const dotsContainer = document.querySelector(".dots");
@@ -34,15 +33,12 @@ const slides = [
 	const arrowRight = document.querySelector(".arrow_right");
 	const arrowLeft = document.querySelector(".arrow_left");
 
-	/* Sélectionne les éléments du DOM ayant les classes 
-	"banner-img" et "#banner p" et les stocke dans les variables img et tagLine */
+
 	const img = document.querySelector(".banner-img");
 	const tagLine = document.querySelector("#banner p");
 
-	/* Initialise l'index à 0, représentant la position actuelle dans le carrousel. */
 	let index = 0;
 
-//#endregion
 
 /*=============== BULLET POINTS ===============*/
 	/* Fonction pour créer un bullet point dans le carrousel */
@@ -55,14 +51,12 @@ const slides = [
 		/* Ajoute le bullet point au conteneur de points (dotsContainer) */
 		dotsContainer.appendChild(dot);
 
-		/* Ajoute un Event Listener au clic sur le bullet point, 
-		appelant la fonction updateCarousel avec l'index du bullet point en argument */
+		
 		dot.addEventListener("click", () => {
 			updateCarousel(i);
 		});
 
-		/* CONDITION : si le bullet point créé correspond à l'index actuel du carrousel, 
-		ajoute la classe "dot_selected" afin qui soit en surbrillance. */
+		
 		if (i === index) {
 			dot.classList.add("dot_selected");
 		}
@@ -136,9 +130,8 @@ const slides = [
 	/* Fonction permettant le défilement automatique du carrousel */
   function autoSlide() {
     autoSlideInterval = setInterval(() => {
-    /* setInterval permet d'appeler la fonction slideRight toutes les X millisecondes */
         slideRight();
-    }, 2000);  /* 3000 millisecondes = 3 secondes */
+    }, 3000);  
   }	
 
 	/* Ajout des Event Listeners aux flèches pour un défilement manuel */
@@ -181,8 +174,8 @@ function preloadImages() {
       clickable: true,
     },
 	autoplay: {
-		delay: 3000, // Le délai entre les diapositives en millisecondes
-		disableOnInteraction: true, // Désactive l'autoplay après une interaction utilisateur (par défaut à true)
+		delay: 3000,
+		disableOnInteraction: true, 
 	  },
   });
 
@@ -208,11 +201,10 @@ function preloadImages() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         // Commencez l'animation lorsque l'élément est visible
-        startCountingAnimation('.counter-1 span', 1500, 1000); // Adjust parameters as needed
-        startCountingAnimation('.counter-2 span', 100, 1000);  // Adjust parameters as needed
-        startCountingAnimation('.counter-3 span', 30, 1000);   // Adjust parameters as needed
-        startCountingAnimation('.counter-4 span', 1000, 1000); // Adjust parameters as needed
-
+        startCountingAnimation('.counter-1 span', 1500, 1000); 
+        startCountingAnimation('.counter-2 span', 100, 2000);  
+        startCountingAnimation('.counter-3 span', 30, 2000);   
+        startCountingAnimation('.counter-4 span', 1000, 1000); 
         // Arrêtez d'observer une fois que l'animation a commencé
         observer.disconnect();
       }

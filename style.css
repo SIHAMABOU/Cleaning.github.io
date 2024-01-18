@@ -918,18 +918,20 @@ position: absolute;
 left: 0;
     top: -15px;
 }
+
 .footer {
     position: relative;
   width: 100%;
   background: #cccccc2b;
 
+
 }
 .footer .footer-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 3.5rem;
-  padding: 60px;
+  padding: 30px;
 }
 .footer-row .footer-col h4 {
     font-family:'Poppins';
@@ -1024,8 +1026,9 @@ left: 0;
     border-radius: 0;
   }
   .footer .footer-row {
-    padding: 20px;
+    padding-left: 20px;
     gap: 1rem;
+    justify-content: space-between;
   }
   .footer-col form {
     display: block;
