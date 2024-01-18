@@ -826,8 +826,8 @@ color: #4b5b68;
 .right-contain{
   display: flex;
   position: relative;
-  background-size: cover; /* Assurer que l'image de fond couvre complètement la div */
   background: url(images/index-service-house-bg.png) no-repeat;
+  background-size: contain;
 }
 .second-div.gallery {
   position: absolute;
