@@ -119,7 +119,6 @@ body {
   color: rgb(46, 181, 46);
   cursor: pointer;
 }
-
 p {
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -941,7 +940,8 @@ left: 0;
     color: #4b5b68;
 }
 .footer-row .footer-col p{
-  margin: 100px 0;
+  margin-top: 97px;
+  color: black;
 }
 .footer-col .links {
   margin-top: 20px;
@@ -1062,4 +1062,66 @@ left: 0;
   border-radius: 5px;
   padding: 10px 15px;
   cursor: pointer;
+}
+
+
+/* bureau.html */
+h1 .pagetitle{
+  text-align: center;
+  padding-top: 40px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    
+}
+.icon-list a ::before{ 
+  font-family: "FontAwesome";
+  content: "\f058";
+  margin-left: 10px;
+  padding-right: 10px;
+  color: #08c;
+}
+.icon li::before{
+  font-family: "FontAwesome";
+  content: "\f067";
+  color: #039640;
+  margin-left: 4px;
+  padding-right: 4px;
+}
+.icon li{
+  color: rgb(2, 149, 2);
+  font-size: small;
+  font-family:Arial, Helvetica, sans-serif;
+
+}
+.heade{
+  border-bottom: 1px solid #a8b4c3;
+  display: inline-block;
+}
+
+
+.leftimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%; /* Ajustez la hauteur en fonction de vos besoins */
+}
+
+.leftimg img {
+  max-width: 60%;
+  height: auto;
+}
+.parag{
+  color:black;
+  font-size: 15px;
+}
+@media (min-width: 992px) {
+
+  .leftimg img {
+    margin-right: -170px;
+    margin-top: 30px;
+    max-width: 60%; /* Ajustez la largeur maximale selon vos besoins */
+  }
+ 
+  
+  
 }

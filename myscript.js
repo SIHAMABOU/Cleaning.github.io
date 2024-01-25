@@ -179,7 +179,17 @@ function preloadImages() {
 	  },
   });
 
-
+ 
+  document.addEventListener('DOMContentLoaded', function () {
+    // Initialisation de Swiper
+    var swiper = new Swiper('.swiper-container-2', {
+      // Paramètres de configuration ici
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  });
 
 
 
@@ -271,3 +281,6 @@ function showSection(sectionId) {
 
   // Ajoutez un gestionnaire d'événements au bouton de retour en haut
   document.getElementById("scrollToTopBtn").addEventListener("click", scrollToTop);
+
+  
+ 
