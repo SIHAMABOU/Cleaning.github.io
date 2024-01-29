@@ -104,6 +104,7 @@ body {
     transform: rotateZ(2deg);
   }
 }
+
 .navbar-nav .nav-item .nav-link:hover {
   border-radius: 20px;
   background-color: #08c;
@@ -112,8 +113,14 @@ body {
 
 .nav-item a{
   font-weight: bold;
-  font-size: 13px;
+  font-size: 12px;
   color: #08c;
+}
+@media only screen and (max-width: 767px){
+ .nav-item a{
+  font-size: 16px;
+
+ } 
 }
 .nav-item a:hover{
   color: rgb(46, 181, 46);
@@ -435,7 +442,7 @@ border-radius: 10px;
 
 .container h2,.container h4{
     font-family:'Poppins';
-    line-height: 56px;
+    line-height: 40px;
     font-weight: 700;
     color: #4b5b68;
     padding-left  : 10px;
@@ -921,7 +928,7 @@ left: 0;
 .footer {
     position: relative;
   width: 100%;
-  background: #cccccc2b;
+  background: #cccccc46;
 
 
 }
@@ -929,7 +936,7 @@ left: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 3.5rem;
+  gap: 1.5rem;
   padding: 30px;
 }
 .footer-row .footer-col h4 {
@@ -952,13 +959,13 @@ left: 0;
 }
 .footer-col .links, li a {
   text-decoration: none;
-  color: #bfbfbf;
+  color: #504a4a;
 }
 .footer-col .links li a:hover {
   color: #fff;
 }
 .footer-col p {
-  margin: 80px 0;
+  margin-top: 80px 0;
   color: #bfbfbf;
   max-width: 300px;
 }
@@ -1063,16 +1070,33 @@ left: 0;
   padding: 10px 15px;
   cursor: pointer;
 }
-
-
-/* bureau.html */
-h1 .pagetitle{
-  text-align: center;
-  padding-top: 40px;
-    font-weight: 700;
-    padding-bottom: 10px;
-    
+.servfoot .links li {
+  margin-left: 6px;
+  font-size: small;
+  border: 1px solid #ccc; /* Définissez le style et la couleur de la bordure */
+  padding: 10px; /* Ajoutez de la marge intérieure pour créer de l'espace entre le texte et la bordure */
+  width: 190px; /* Définissez une largeur fixe pour les éléments de la liste */
+  box-sizing: border-box; /* Incluez le padding et la border dans la largeur totale de l'élément */
 }
+@media (max-width: 768px){
+  .servfoot .links li{
+  margin-left: 0px;
+  }
+}
+
+.servfoot .links a {
+  display: block;
+  text-decoration: none;
+  color: #333; /* Définissez la couleur du texte */
+}
+/* bureau.html */
+.titre2{
+  margin-top: 10px;
+  font-size: x-large;
+  border-bottom: 1px solid #a8b4c3;
+  display: inline-block;
+}
+
 .icon-list a ::before{ 
   font-family: "FontAwesome";
   content: "\f058";
@@ -1111,17 +1135,24 @@ h1 .pagetitle{
   height: auto;
 }
 .parag{
-  color:black;
+  color: #000;
   font-size: 15px;
 }
 @media (min-width: 992px) {
 
   .leftimg img {
-    margin-right: -170px;
+    margin-right: -100px;
     margin-top: 30px;
-    max-width: 60%; /* Ajustez la largeur maximale selon vos besoins */
+    max-width: 78%; /* Ajustez la largeur maximale selon vos besoins */
   }
- 
-  
-  
+ .carousel{
+  margin-top: 25px;
+  width: 80%;
+  margin-left: 100px;
+ }
+ .SERVICE {
+  font-family:'Poppins';
+  font-size: 20px;
+  font-weight: bold;
+ }
 }
