@@ -497,7 +497,7 @@ border-radius: 10px;
   
 .container p{
   margin: 10px;
-    opacity: 0.5;
+    opacity: 1;
   }
   .list-provide{
     display:flex;
@@ -947,7 +947,6 @@ left: 0;
     color: #4b5b68;
 }
 .footer-row .footer-col p{
-  margin-top: 97px;
   color: black;
 }
 .footer-col .links {
@@ -969,37 +968,9 @@ left: 0;
   color: #bfbfbf;
   max-width: 300px;
 }
-.footer-col form {
-  display: flex;
-  gap: 5px;
-}
-.footer-col input {
-  height: 40px;
-  border-radius: 6px;
-  background: none;
-  width: 100%;
-  outline: none;
-  border: 1px solid #7489c6;
-  caret-color: #fff;
-  color: #fff;
-  padding-left: 10px;
-}
-.footer-col input::placeholder {
-  color: #ccc;
-}
-.footer-col form button {
-  background: #fff;
-  outline: none;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.2s ease;
-}
-.footer-col form button:hover {
-  background: #cecccc;
-}
+
+
+
 .footer-col .icons {
   display: flex;
   margin-top: 30px;
@@ -1024,6 +995,9 @@ left: 0;
     
 }
 @media (max-width: 768px) {
+  .footer-row .footer-col p{
+    margin-top: 97px;
+  }
   .footer {
     position: relative;
     bottom: 0;
@@ -1107,12 +1081,12 @@ left: 0;
 .icon li::before{
   font-family: "FontAwesome";
   content: "\f067";
-  color: #039640;
+  color: black;
   margin-left: 4px;
   padding-right: 4px;
 }
 .icon li{
-  color: rgb(2, 149, 2);
+  color: black;
   font-size: small;
   font-family:Arial, Helvetica, sans-serif;
 
@@ -1135,7 +1109,7 @@ left: 0;
   height: auto;
 }
 .parag{
-  color: #000;
+  color:black;
   font-size: 15px;
 }
 @media (min-width: 992px) {
